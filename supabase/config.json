@@ -1,0 +1,1 @@
+{"name":"civicassist","version":"0.1.0","database":{"extensions":["pgcrypto"]},"scripts":{"start":"supabase start","stop":"supabase stop","reset":"supabase db reset","migrate":"supabase db migration up","seed":"supabase db reset && psql $SUPABASE_DB_URL -f supabase/seed.sql"}}

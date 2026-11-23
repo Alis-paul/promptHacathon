@@ -1,0 +1,22 @@
+/* src/styles/index.css */
+@import './design-tokens.css';
+
+/* Global resets and typography */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-body, Arial, sans-serif);
+  color: var(--color-dark-text);
+  background-color: var(--color-warm-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display, serif);
+  margin: var(--space-4) 0 var(--space-2) 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
