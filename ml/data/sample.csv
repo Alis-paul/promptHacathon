@@ -1,0 +1,8 @@
+# ml/data/sample.csv
+# Development sample dataset for ML pipeline testing (not production data).
+# Columns: text,department
+"Garbage has not been collected for three days",Sanitation
+"Street light near my house is not working",Electrical / Streetlights
+"Water has been leaking from the pipeline",Water Supply
+"Large pothole on the main road",Roads
+"Drain is overflowing near the bus stop",Drainage

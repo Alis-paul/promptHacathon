@@ -141,7 +141,22 @@ const ReportPage = () => {
       ]);
 
       // 4. Navigate to success page
-      navigate(`/complaint/${complaint.id}`);
+      // 4. Trigger AI routing (server-side)
+try {
+  await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/complaints/${complaint.id}/route`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${sessionStorage.getItem('supabase.auth.token')}`,
+    },
+    body: JSON.stringify({ description }),
+  });
+} catch (routingErr) {
+  console.error('Routing error:', routingErr);
+}
+
+// 5. Navigate to success page
+navigate(`/complaint/${complaint.id}`);
     } catch (err) {
       console.error(err);
       if (err.message.includes('Image upload')) {
